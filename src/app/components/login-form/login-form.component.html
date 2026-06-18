@@ -6,18 +6,32 @@
           <h2 class="text-center mb-4">Login</h2>
 
           <div class="mb-3">
-            <label for="email" class="form-label">Nome</label>
+            <label for="nome" class="form-label">Nome *</label>
             <input
+              pattern="[a-zA-Z ]*"
               type="nome"
               formControlName="nome"
               class="form-control"
-              id="email"
-              placeholder="Digite seu e-mail"
+              id="nome"
+              placeholder="Digite seu nome"
             />
+            @if (
+              loginForm.get("nome")?.hasError("required") &&
+              loginForm.get("nome")?.touched
+            ) {
+              <div class="alert alert-danger" role="alert">
+                Informe o nome do usuário
+              </div>
+            }
+            @if (loginForm.get("nome")?.hasError("pattern")) {
+              <div class="alert alert-danger" role="alert">
+                Esse campo não aceita números
+              </div>
+            }
           </div>
 
           <div class="mb-3">
-            <label for="senha" class="form-label">Senha</label>
+            <label for="senha" class="form-label">Senha *</label>
             <input
               type="password"
               class="form-control"
@@ -25,6 +39,11 @@
               id="senha"
               placeholder="Digite sua senha"
             />
+            @if (
+              loginForm.get("senha")?.invalid && loginForm.get("senha")?.touched
+            ) {
+              <div class="alert alert-danger" role="alert">Informe a senha</div>
+            }
           </div>
 
           <button type="submit" class="btn btn-primary w-100">Entrar</button>
@@ -33,4 +52,3 @@
     </div>
   </div>
 </section>
-
