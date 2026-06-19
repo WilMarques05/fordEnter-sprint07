@@ -62,7 +62,11 @@
               <span>Entrar</span>
             }
           </button>
+
         </form>
+        @if (mensagemErro) {
+          <div class="alert alert-danger alertaServidor"  role="alert">{{mensagemErro}}</div>
+        }
       </div>
     </div>
   </div>
