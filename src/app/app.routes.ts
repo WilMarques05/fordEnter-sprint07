@@ -22,12 +22,12 @@ export const routes: Routes = [
   },
 
   {
-    path: 'deashboard',
+    path: 'dashboard',
     pathMatch: 'full',
     canActivate: [loginGuard],
     loadComponent: () => {
-      return import('./pages/deashboard/deashboard.component').then(
-        (c) => c.DeashboardComponent,
+      return import('./pages/dashboard/dashboard.component').then(
+        (c) => c.DashboardComponent,
       );
     },
   },
