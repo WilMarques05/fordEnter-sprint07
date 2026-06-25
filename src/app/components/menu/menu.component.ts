@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router'
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router'
 
 @Component({
   selector: 'app-menu',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
