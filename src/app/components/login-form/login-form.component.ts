@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { LoginService } from '../../services/login.service';
 import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-login-form',
@@ -16,6 +17,7 @@ import { firstValueFrom } from 'rxjs';
 })
 export class LoginFormComponent {
   loginService = inject(LoginService);
+  router = inject(Router);
   spinnerAguardando = false;
   mensagemErro = '';
 
@@ -34,7 +36,7 @@ export class LoginFormComponent {
       try {
         this.spinnerAguardando = true;
         await firstValueFrom(this.loginService.fazerLogin(nome, senha));
-        alert('Login Efetuado com Sucesso! ' + `Bem vindo, ${nome}!`);
+        this.router.navigate(["/home"]);
         this.loginForm.reset();
       } catch (error: any) {
         if (error.status === 401) {

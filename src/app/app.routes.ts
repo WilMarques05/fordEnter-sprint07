@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { loginGuard } from './guards/login.guard';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {
     path: 'home',
     pathMatch: 'full',
+    canActivate: [loginGuard],
     loadComponent: () => {
       return import('./pages/home/home.component').then((c) => c.HomeComponent);
     },
@@ -22,6 +24,7 @@ export const routes: Routes = [
   {
     path: 'deashboard',
     pathMatch: 'full',
+    canActivate: [loginGuard],
     loadComponent: () => {
       return import('./pages/deashboard/deashboard.component').then(
         (c) => c.DeashboardComponent,
