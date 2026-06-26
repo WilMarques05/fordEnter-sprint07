@@ -1,0 +1,20 @@
+/* 📱 CONFIGURAÇÃO PADRÃO (Celular/Telas menores que 768px) */
+.container-dashboard {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden; /* Evita que a página inteira role para os lados */
+}
+
+.tabela-veiculo {
+  min-width: 850px; /* Garante que a tabela mantenha estrutura legível e use o scroll interno do Bootstrap */
+}
+
+/* 🖥️ COMPORTAMENTO APENAS PARA COMPUTADOR (A partir de 768px) */
+@media (min-width: 768px) {
+  .container-dashboard {
+    /* Desconta exatamente os 280px da sua sidebar fixa + os paddings do #main-content */
+    max-width: calc(100vw - 280px - 3rem) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
