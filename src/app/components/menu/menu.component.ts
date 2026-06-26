@@ -11,6 +11,7 @@ export class MenuComponent {
   router = inject (Router);
 
   logout(){
+    sessionStorage.removeItem("usuario");
     this.router.navigate([""]);
   }
 }
