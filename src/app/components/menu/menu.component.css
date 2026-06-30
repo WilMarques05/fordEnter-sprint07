@@ -1,52 +1,70 @@
 .offcanvas-md{
-    background-color: rgb(5, 5, 80) !important;
+  background-color: rgb(5, 5, 80) !important;
 }
 
-.nav-item{
-    font-family: sans-serif;
-    font-weight: 500;
-    cursor: pointer;
+.offcanvas-body{
+  width: 100%;
 }
 
-.nav-item-btn{
-    font-family: sans-serif;
-    font-weight: 500;
-    cursor: pointer;
+.nav-item {
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-/* Customização do Link Ativo do Angular */
+.nav-item-btn {
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  transition: 0.2s;
+  color: gray !important;
+  font-size: 1.06rem;
+  font-weight: 700;
+}
+
 .nav-link.active {
   background-color: #0d6efd !important;
+  color: white !important;
 }
 
-.btn-menu-hamburguer{
-    background-color: rgba(5, 5, 80, 0.904) !important;
+.btn-menu-hamburguer {
+  background-color: rgba(5, 5, 80, 0.904) !important;
 }
 
-/* 🖥️ COMPORTAMENTO PARA COMPUTADOR (Telas de 768px para cima) */
+.container-logo {
+  margin: 20px 0 8px 8px; 
+  align-self: flex-start;
+}
+
+.img-logo{
+  width: 60px;
+}
+
 @media (min-width: 768px) {
   .sidebar-fixa {
+    display: flex;
     position: fixed !important;
-    transform: none !important; /* Anula o efeito de sumir do Offcanvas */
-    visibility: visible !important; /* Garante que fique visível direto */
+    transform: none !important;
+    visibility: visible !important;
     width: 280px !important;
     height: 100vh !important;
     z-index: 1040;
   }
 
   #main-content {
-    margin-left: 280px !important; /* Empurra o conteúdo apenas no PC */
+    margin-left: 280px !important;
   }
 }
 
-/* 📱 COMPORTAMENTO PARA CELULAR (Telas menores que 768px) */
 @media (max-width: 767.98px) {
   .sidebar-fixa {
-    width: 280px; /* Largura padrão quando o menu abrir no celular */
+    width: 280px;
   }
-  
+
   #main-content {
-    margin-left: 0 !important; /* Conteúdo ocupa a tela inteira no celular */
+    margin-left: 0 !important;
   }
 }
-
