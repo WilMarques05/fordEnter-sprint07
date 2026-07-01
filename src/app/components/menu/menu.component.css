@@ -1,23 +1,23 @@
-.offcanvas-md{
+.offcanvas-md {
   background-color: rgb(5, 5, 80) !important;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
 }
 
-.offcanvas-body{
+.offcanvas-body {
   width: 100%;
 }
 
 .container-logo {
-  margin: 20px 0 0px 0px; 
+  margin: 20px 0 0px 0px;
   align-self: center;
   width: 40%;
   height: 7%;
   margin-bottom: 60px;
 }
 
-.img-logo{
+.img-logo {
   width: 100%;
   height: 100%;
 }
@@ -75,5 +75,13 @@
 
   #main-content {
     margin-left: 0 !important;
+  }
+
+  .container-logo {
+    margin: 20px 0 0px 0px;
+    align-self: center;
+    width: 40%;
+    height: 7%;
+    margin-bottom: 10px;
   }
 }
