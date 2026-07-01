@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 86vh;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-titulo{
+    padding-top: 80px;
+    color: #0033a0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contianer-subtitulo{
+    font-family: Georgia, serif;
+}
+
+
+section{
+    background: url('/ford-home_4k.png');
+    min-height: 60vh;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+}
+
