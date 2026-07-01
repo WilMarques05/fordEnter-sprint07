@@ -1,4 +1,114 @@
+/* ==========================================
+   ESTILOS BASE DO COMPONENTE DE MENU
+   ========================================== */
+
 .offcanvas-md {
+  background-color: rgb(5, 5, 80) !important;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.offcanvas-body {
+  width: 100%;
+}
+
+.container-logo {
+  margin: 20px 0 0px 0px;
+  align-self: center;
+  width: 40%;
+  height: 7%;
+  margin-bottom: 60px;
+}
+
+.img-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-item {
+  padding: 4px;
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* CORREÇÃO CRÍTICA: Removido o margin-top de 500px que forçava a caixa invisível
+  a vazar horizontalmente e criar o overflow quando o offcanvas estava recolhido.
+*/
+.nav-item-btn {
+  margin-top: 0 !important; 
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  transition: 0.2s;
+  color: gray !important;
+  font-size: 1.06rem;
+  font-weight: 700;
+}
+
+.nav-link.active {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
+
+.btn-menu-hamburguer {
+  background-color: rgba(5, 5, 80, 0.904) !important;
+}
+
+/* ==========================================
+   RESPONSIVIDADE: DESKTOP (TELAS GRANDES)
+   ========================================== */
+@media (min-width: 768px) {
+  .sidebar-fixa {
+    display: flex;
+    position: fixed !important;
+    transform: none !important;
+    visibility: visible !important;
+    width: 280px !important;
+    height: 100vh !important;
+    z-index: 1040;
+  }
+
+  #main-content {
+    margin-left: 280px !important;
+    /* Garante que o painel ocupe apenas a área restante exata ao lado da sidebar */
+    width: calc(100% - 280px) !important; 
+  }
+}
+
+/* ==========================================
+   RESPONSIVIDADE: MOBILE (TELAS PEQUENAS)
+   ========================================== */
+@media (max-width: 767.98px) {
+  .sidebar-fixa {
+    width: 280px;
+    height: 100vh !important;
+  }
+
+  #main-content {
+    margin-left: 0 !important;
+    /* No celular, o painel assume a largura total real de forma segura */
+    width: 100% !important; 
+    max-width: 100% !important;
+    /* Isola o conteúdo principal blindando a página contra qualquer rolagem lateral */
+    overflow-x: hidden !important; 
+  }
+
+  .container-logo {
+    margin: 20px 0 0px 0px;
+    align-self: center;
+    width: 40%;
+    height: 7%;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* .offcanvas-md {
   background-color: rgb(5, 5, 80) !important;
   display: flex;
   justify-content: flex-start;
@@ -84,4 +194,4 @@
     height: 7%;
     margin-bottom: 10px;
   }
-}
+} */
